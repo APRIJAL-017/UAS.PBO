@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Motor</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="splash-screen">
+        <h1>Selamat Datang</h1>
+        <p>Pilih motor terbaik untuk setiap petualangan Anda.</p>
+        <button onclick="showMainSection()">Lihat Produk</button>
+    </div>
+
+    <main id="main-section">
+        <header>
+            <!-- Logo -->
+            <div style="display: flex; align-items: center; justify-content: flex-start; margin-top: 20px;">
+                <img src="./Gambar/LOGO.png" alt="Logo Zull Motor" class="responsive-logo"
+                    style="width: 50px; height: 50px; margin-right: 5px; border: 2px solid #000; box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);">
+            </div>
+
+            <h1>Zull Motor</h1>
+            <h2>Jual Motor Terbaik untuk Segala Petualangan!</h2>
+            <nav>
+                <div style="display: flex; align-items: center; justify-content: flex-end; width: 100%;">
+                    <button class="view-cart" onclick="toggleCart()">Lihat Keranjang</button>
+                    <div class="menu">
+                        <button>☰ Menu</button>
+                        <ul class="dropdown">
+                            <li><a href="#" onclick="filterProducts('all')">Semua Produk</a></li>
+                            <li><a href="#" onclick="filterProducts('honda')">Honda</a></li>
+                            <li><a href="#" onclick="filterProducts('yamaha')">Yamaha</a></li>
+                            <li><a href="#" onclick="filterProducts('suzuki')">Suzuki</a></li>
+                            <li><a href="#" onclick="filterProducts('vesmet')">Vesmet</a></li>
+                            <li><a href="#" onclick="filterProducts('kawasaki')">Kawasaki</a></li>
+                            <li><a href="#" onclick="filterProducts('ktm')">KTM</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <section id="products">
+            <div class="product-list">
+                <!--Produk Honda-->
+                <!--1-->
+                <div class="product honda">
+                    <img src="./Gambar/CBR250RR..webp" alt="Gambar Honda CBR 250RR">
+                    <h3>Honda CBR 250RR</h3>
+                    <p>Harga: Rp37,205,000</p>
+                    <button onclick="addToCart('Honda CBR 250RR', 37205000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Honda CBR 250RR')">Lihat Spesifikasi</button>
+                </div>
+                <!--2-->
+                <div class="product honda">
+                    <img src="./Gambar/CRF150L.webp" alt="CRF150L">
+                    <h3>CRF150L</h3>
+                    <p>Harga: Rp37,205,000</p>
+                    <button onclick="addToCart('CRF150L', 37205000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('CRF150L')">Lihat Spesifikasi</button>
+                </div>
+                <!--3-->
+                <div class="product honda">
+                    <img src="./Gambar/CB150R.webp" alt="CB150R Streetfire">
+                    <h3>CB150R Streetfire</h3>
+                    <p>Harga: Rp31,780,000</p>
+                    <button onclick="addToCart('CB150R Streetfire', 31780000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('CB150R Streetfire')">Lihat Spesifikasi</button>
+                </div>
+                <!--4-->
+                <div class="product honda">
+                    <img src="./Gambar/Beat.jpg" alt="Beat Deluxe">
+                    <h3>Beat Deluxe</h3>
+                    <p>Harga: Rp18,430,000</p>
+                    <button onclick="addToCart('Beat Deluxe', 18430000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Beat Deluxe')">Lihat Spesifikasi</button>
+                </div>
+                <!--5-->
+                <div class="product honda">
+                    <img src="./Gambar/Vario160.webp" alt="Vario 160">
+                    <h3>Vario 160</h3>
+                    <p>Harga: Rp27,350,000</p>
+                    <button onclick="addToCart('Vario 160', 27350000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Vario 160')">Lihat Spesifikasi</button>
+                </div>
+
+                <!--Produk Yamaha-->
+                <!--1-->
+                <div class="product yamaha">
+                    <img src="./Gambar/Yamaha Aerox Alpha" alt="Motor Yamaha">
+                    <h3>Yamaha Aerox</h3>
+                    <p>Harga: Rp33,990,000</p>
+                    <button onclick="addToCart('Yamaha Aerox Alpha', 33990000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Yamaha Aerox Alpha')">Lihat Spesifikasi</button>
+                </div>
+                <!--2-->
+                <div class="product yamaha">
+                    <img src="./Gambar/Yamaha NMAX Neo" alt="Yamaha NMAX Neo">
+                    <h3>Yamaha NMAX</h3>
+                    <p>Harga: Rp32,855,000</p>
+                    <button onclick="addToCart('Yamaha NMAX Neo', 32855000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Yamaha NMAX Neo')">Lihat Spesifikasi</button>
+                </div>
+                <!--3-->
+                <div class="product yamaha">
+                    <img src="./Gambar/Yamaha R15M" alt="Yamaha R15M">
+                    <h3>R15M ABS</h3>
+                    <p>Harga: Rp44,980,000</p>
+                    <button onclick="addToCart('Yamaha R15M ABS', 44980000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Yamaha R15M ABS')">Lihat Spesifikasi</button>
+                </div>
+                <!--4-->
+                <div class="product yamaha">
+                    <img src="./Gambar/Yamaha WR155R" alt="Yamaha WR155R">
+                    <h3>Yamaha WR155R</h3>
+                    <p>Harga: Rp39,055,000</p>
+                    <button onclick="addToCart('Yamaha WR155R', 39055000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Yamaha WR155R')">Lihat Spesifikasi</button>
+                </div>
+                <!--5-->
+                <div class="product yamaha">
+                    <img src="./Gambar/Yamaha Fazzio Hybrid Neo" alt="Fazzio Hybrid Neo">
+                    <h3>Fazzio Hybrid Neo</h3>
+                    <p>Harga: R23,255,000</p>
+                    <button onclick="addToCart('Fazzio Hybrid Neo', 23255000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Fazzio Hybrid Neo')">Lihat Spesifikasi</button>
+                </div>
+
+                <!--Produk Suzuki-->
+                <!--1-->
+                <div class="product suzuki">
+                    <img src="./Gambar/Suzuki GSX-R150.webp" alt="Suzuki GSX-R150">
+                    <h3>Suzuki GSX-R150</h3>
+                    <p>Harga: Rp35,340,000</p>
+                    <button onclick="addToCart('Suzuki GSX-R150', 35340000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Suzuki GSX-R150')">Lihat Spesifikasi</button>
+                </div>
+                <!--2-->
+                <div class="product suzuki">
+                    <img src="./Gambar/Suzuki NEX_II.webp" alt="Suzuki NEX_II">
+                    <h3>Suzuki NEX_II</h3>
+                    <p>Harga: Rp19,940,000</p>
+                    <button onclick="addToCart('Suzuki NEX_II', 19940000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Suzuki NEX_II')">Lihat Spesifikasi</button>
+                </div>
+                <!--3-->
+                <div class="product suzuki">
+                    <img src="./Gambar/Suzuki Satria F150 NEW.webp" alt="Suzuki Satria F150 NEW">
+                    <h3>Suzuki Satria F150 NEW</h3>
+                    <p>Harga: Rp28,910,000</p>
+                    <button onclick="addToCart('Suzuki Satria F150 NEW', 28910000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Suzuki Satria F150 NEW')">Lihat Spesifikasi</button>
+                </div>
+                <!--4-->
+                <div class="product suzuki">
+                    <img src="./Gambar/Suzuki VSTROM 250 SX.webp" alt="Suzuki VSTROM 250 SX">
+                    <h3>Suzuki VSTROM 250 SX</h3>
+                    <p>Harga: Rp59,500,000</p>
+                    <button onclick="addToCart('Suzuki VSTROM 250 SX', 59500000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Suzuki VSTROM 250 SX')">Lihat Spesifikasi</button>
+                </div>
+                <!--5-->
+                <div class="product suzuki">
+                    <img src="./Gambar/Suzuki NEX CROSSOVER.webp" alt="Suzuki NEX CROSSOVER">
+                    <h3>Suzuki NEX CROSSOVER</h3>
+                    <p>Harga: Rp21,025,000</p>
+                    <button onclick="addToCart('Suzuki NEX CROSSOVER', 21025000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Suzuki NEX CROSSOVER')">Lihat Spesifikasi</button>
+                </div>
+
+                <!--Produk Vespa Metik-->
+                <!--1-->
+                <div class="product vesmet">
+                    <img src="./Gambar/Vespa Sprint 150 ABS" alt="Vespa Sprint 150 ABS">
+                    <h3>Vespa Sprint 150 ABS</h3>
+                    <p>Harga: Rp57,100,000</p>
+                    <button onclick="addToCart('Vespa Sprint 150 ABS', 57100000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Vespa Sprint 150 ABS')">Lihat Spesifikasi</button>
+                </div>
+                <!--2-->
+                <div class="product vesmet">
+                    <img src="./Gambar/Vespa Sprint S 150 ABS.png" alt="Vespa Sprint S 150 ABS">
+                    <h3>Vespa Sprint S 150 ABS</h3>
+                    <p>Harga: Rp59,600,000</p>
+                    <button onclick="addToCart('Vespa Sprint S 150 ABS', 57100000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Vespa Sprint S 150 ABS')">Lihat Spesifikasi</button>
+                </div>
+                <!--3-->
+                <div class="product vesmet">
+                    <img src="./Gambar/Vespa GTS CLASSIC 150 ABS" alt="Vespa GTS CLASSIC 150 ABS">
+                    <h3>Vespa GTS CLASSIC 150 ABS</h3>
+                    <p>Harga: Rp79,800,000</p>
+                    <button onclick="addToCart('Vespa GTS CLASSIC 150 ABS', 79800000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Vespa GTS CLASSIC 150 ABS')">Lihat Spesifikasi</button>
+                </div>
+                <!--4-->
+                <div class="product vesmet">
+                    <img src="./Gambar/Vespa GTS Super Tech 300" alt="Vespa GTS Super Tech 300">
+                    <h3>Vespa GTS Super Tech 300</h3>
+                    <p>Harga: Rp164,500,000</p>
+                    <button onclick="addToCart('Vespa GTS Super Tech 300', 164500000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Vespa GTS Super Tech 300')">Lihat Spesifikasi</button>
+                </div>
+                <!--5-->
+                <div class="product vesmet">
+                    <img src="./Gambar/Vespa Primavera 150 ABS" alt="Vespa Primavera 150 ABS">
+                    <h3>Vespa Primavera 150 ABS</h3>
+                    <p>Harga: Rp54,100,000</p>
+                    <button onclick="addToCart('Vespa Primavera 150 ABS', 54100000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Vespa Primavera 150 ABS')">Lihat Spesifikasi</button>
+                </div>
+
+                <!--Produk Kawasaki-->
+                <!--1-->
+                <div class="product kawasaki">
+                    <img src="./Gambar/Kawasaki NINJA 250 ABS SE" alt="Kawasaki NINJA 250 ABS">
+                    <h3>Kawasaki NINJA 250 ABS</h3>
+                    <p>Harga: Rp79,900,000</p>
+                    <button onclick="addToCart('Kawasaki NINJA 250 ABS', 79900000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Kawasaki NINJA 250 ABS')">Lihat Spesifikasi</button>
+                </div>
+                <!--2-->
+                <div class="product kawasaki">
+                    <img src="./Gambar/Kawasaki KLX230R S" alt="Kawasaki KLX230R S">
+                    <h3>Kawasaki KLX230R S</h3>
+                    <p>Harga: Rp50,900,000</p>
+                    <button onclick="addToCart('Kawasaki KLX230R S', 50900000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Kawasaki KLX230R S')">Lihat Spesifikasi</button>
+                </div>
+                <!--3-->
+                <div class="product kawasaki">
+                    <img src="./Gambar/Kawasaki W175R" alt="Kawasaki W175R">
+                    <h3>Kawasaki . . W175R</h3>
+                    <p>Harga: Rp34,300,000</p>
+                    <button onclick="addToCart('Kawasaki W175R', 34300000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Kawasaki W175R')">Lihat Spesifikasi</button>
+                </div>
+                <!--4-->
+                <div class="product kawasaki">
+                    <img src="./Gambar/Kawasaki NINJA H2" alt="Kawasaki NINJA H2">
+                    <h3>Kawasaki NINJA H2</h3>
+                    <p>Harga: Rp873,000,000</p>
+                    <button onclick="addToCart('Kawasaki NINJA H2', 873000000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Kawasaki NINJA H2')">Lihat Spesifikasi</button>
+                </div>
+                <!--5-->
+                <div class="product kawasaki">
+                    <img src="./Gambar/Kawasaki VULCAN S" alt="Kawasaki VULCAN S">
+                    <h3>Kawasaki VULCAN S</h3>
+                    <p>Harga: Rp220,000,000</p>
+                    <button onclick="addToCart('Kawasaki VULCAN S', 220000000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('Kawasaki VULCAN S')">Lihat Spesifikasi</button>
+                </div>
+
+                <!--Produk KTM-->
+                <!--1-->
+                <div class="product ktm">
+                    <img src="./Gambar/KTM Duke 200" alt="KTM Duke 200">
+                    <h3>KTM Duke 200</h3>
+                    <p>Harga: Rp52,000,000</p>
+                    <button onclick="addToCart('KTM Duke 200', 52000000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('KTM Duke 200')">Lihat Spesifikasi</button>
+                </div>
+                <!--2-->
+                <div class="product ktm">
+                    <img src="./Gambar/KTM RC 250" alt="KTM rc 250">
+                    <h3>KTM RC 250</h3>
+                    <p>Harga: Rp50,900,000</p>
+                    <button onclick="addToCart('KTM RC 250', 50900000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('KTM RC 250')">Lihat Spesifikasi</button>
+                </div>
+                <!--3-->
+                <div class="product ktm">
+                    <img src="./Gambar/KTM RC 200.webp" alt="KTM rc 200">
+                    <h3>KTM RC 200</h3>
+                    <p>Harga: Rp43,500,000</p>
+                    <button onclick="addToCart('KTM RC 200', 43500000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('KTM RC 200')">Lihat Spesifikasi</button>
+                </div>
+                <!--4-->
+                <div class="product ktm">
+                    <img src="./Gambar/KTM 450 SX-F" alt="KTM 450 SX-F">
+                    <h3>KTM 450 SX-F</h3>
+                    <p>Harga: Rp11,700,000</p>
+                    <button onclick="addToCart('KTM 450 SX-F', 11700000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('KTM 450 SX-F')">Lihat Spesifikasi</button>
+                </div>
+                <!--5-->
+                <div class="product ktm">
+                    <img src="./Gambar/KTM 250 SX-F" alt="KTM 250 SX-F">
+                    <h3>KTM 450 SX-F</h3>
+                    <p>Harga: Rp10,700,000</p>
+                    <button onclick="addToCart('KTM 250 SX-F', 10700000)">Tambah ke Keranjang</button>
+                    <button onclick="showSpecs('KTM 250 SX-F')">Lihat Spesifikasi</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="cart">
+            <button class="close-cart" onclick="closeCart()">×</button>
+            <h2>Keranjang Belanja</h2>
+            <div id="cart-items">
+                <p>Keranjang Anda kosong.</p>
+            </div>
+            <div id="total">
+                <p>Total: Rp0</p>
+            </div>
+            <button onclick="checkout()">Checkout</button>
+        </section>
+    </main>
+
+    <div id="spec-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSpecs()">&times;</span>
+            <h3 id="spec-title">Spesifikasi Produk</h3>
+            <div id="spec-details"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="brand-icons">
+                <img src="./Gambar/logoHonda" alt="Honda">
+                <img src="./Gambar/logoVespa" alt="Vespa">
+                <img src="./Gambar/logoKTM" alt="KTM">
+                <img src="./Gambar/logoYamaha" alt="Yamaha">
+                <img src="./Gambar/logoKawasaki" alt="Kawasaki">
+                <img src="./Gambar/logoSuzuki" alt="Suzuki">
+            </div>
+
+            <div class="follow-section">
+                <h4>Follow Me:</h4>
+                <div class="social-icon">
+                    <a href="https://wa.me/6285320445840" target="_blank">
+                        <img src="./Gambar/icons8-whatsapp-94.png" alt="WhatsApp">
+                    </a>
+                    <a href="https://www.instagram.com/mhmmdaprizal_17/" target="_blank">
+                        <img src="./Gambar/icons8-instagram-94.png" alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/muhamad.afrijal.3914" target="_blank">
+                        <img src="./Gambar/icons8-facebook-94.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.tiktok.com/@mhmdaprizal" target="_blank">
+                        <img src="./Gambar/icons8-tiktok-48.png" alt="Tiktok">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="address">
+            <p>Alamat Lengkap: Jl. Impian No. 017, Kota Maju, Depan Markas Iron man, Indonesia :)</p>
+        </div>
+    </footer>
+
+    <!-- Modal Registrasi -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegisterModal()">&times;</span>
+            <h2>Form Registrasi</h2>
+            <form id="register-form" onsubmit="submitRegistration(event)">
+                <label for="name">Nama Lengkap:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Alamat:</label>
+                <textarea id="address" name="address" required></textarea>
+
+                <button type="submit">Lanjutkan Checkout</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
