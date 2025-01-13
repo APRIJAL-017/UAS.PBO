@@ -334,7 +334,7 @@
             </div>
 
             <div class="follow-section">
-                <h4>Follow Us:</h4>
+                <h4>Follow Me:</h4>
                 <div class="social-icon">
                     <a href="https://wa.me/6285320445840" target="_blank">
                         <img src="./Gambar/icons8-whatsapp-94.png" alt="WhatsApp">
@@ -377,10 +377,24 @@
         </div>
     </div>
 
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="script.js"></script>
+
+    <link rel="manifest" href="manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker
+                    .register('./service-worker.js')
+                    .then(reg => console.log('Service Worker Registered:', reg))
+                    .catch(err => console.error('Service Worker Registration Failed:', err));
+            });
+        }
+    </script>
+    
+
+
 </body>
 
 </html>
